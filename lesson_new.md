@@ -1,7 +1,3 @@
-Below is a revised `lesson.md` that keeps the 6m structure and voice, but weaves in the selected 5m content as optional “deeper dive” blocks and extra tasks. [github](https://github.com/su-ntu-ctp/5m-data-1.4-sql-basic-dml)
-
-***
-
 # Section 1: The Art of Asking (Selection, Filtering & Sorting)
 
 ### Learning Objectives
@@ -36,9 +32,9 @@ Open DbGate and create a new connection to the DuckDB database file `db/unit-1-4
 > | Flat model | flat_model | Text (General) | - | - |  
 > | Lease commence date | lease_commence_date | Datetime (Year) "YYY" | - | - |  
 > | Remaining lease | remaining_lease | Text (General) | - | - |  
-> | Resale price | resale_price | Numeric (General) | $ | - | [github](https://github.com/su-ntu-ctp/5m-data-1.4-sql-basic-dml)  
+> | Resale price | resale_price | Numeric (General) | $ | - | 
 >  
-> Compare them with the data types in DuckDB's table. [github](https://github.com/su-ntu-ctp/5m-data-1.4-sql-basic-dml)
+> Compare them with the data types in DuckDB's table. 
 
 **Examples:**
 
@@ -88,7 +84,7 @@ ORDER BY
 **Exercise**
 
 - Select any 3 columns from the table.  
-- Select flats from highest to lowest resale price in Punggol. [github](https://github.com/su-ntu-ctp/5m-data-1.4-sql-basic-dml)
+- Select flats from highest to lowest resale price in Punggol. 
 
 > **What’s Your Query?**  
 > -  **QUESTION** “If our table had 100 columns and a million rows, what would happen to our computer's memory if we always used `SELECT *`?”
@@ -107,7 +103,7 @@ Mathematical Operators are used to perform mathematical operations on data.
 | `-` | Subtraction |
 | `*` | Multiplication |
 | `/` | Division |
-| `%` | Modulo | [github](https://github.com/su-ntu-ctp/5m-data-1.4-sql-basic-dml)
+| `%` | Modulo | 
 
 Example – calculate price in thousands and rename for clarity:
 
@@ -126,7 +122,7 @@ ORDER BY
 
 ##### Filters
 
-Filters are used to filter data based on a condition. The `WHERE` clause is used to filter data in a `SELECT` statement and commonly uses comparison and logical operators. [github](https://github.com/su-ntu-ctp/5m-data-1.4-sql-basic-dml)
+Filters are used to filter data based on a condition. The `WHERE` clause is used to filter data in a `SELECT` statement and commonly uses comparison and logical operators. 
 
 | Operator | Description |
 | --- | --- |
@@ -138,7 +134,7 @@ Filters are used to filter data based on a condition. The `WHERE` clause is used
 | `<=` | Less or equal |
 | `AND` | Logical AND |
 | `OR` | Logical OR |
-| `NOT` | Logical NOT | [github](https://github.com/su-ntu-ctp/5m-data-1.4-sql-basic-dml)
+| `NOT` | Logical NOT | 
 
 Example:
 
@@ -151,16 +147,16 @@ WHERE
   town = 'BUKIT MERAH';
 ```
 
-You can introduce line breaks to make the query more readable. [github](https://github.com/su-ntu-ctp/5m-data-1.4-sql-basic-dml)
+You can introduce line breaks to make the query more readable. 
 
 > **Exercise – basic filters**  
 > - Select flats with floor area greater than 100 sqm.  
 > - Select flats with resale price between 400,000 and 500,000.  
-> - Select flats with lease commence date later than year 2000 and floor area greater than 100 sqm. [github](https://github.com/su-ntu-ctp/5m-data-1.4-sql-basic-dml)
+> - Select flats with lease commence date later than year 2000 and floor area greater than 100 sqm. 
 
 ##### Advanced Filters (Optional)
 
-Sometimes basic `=` and `>` are not enough; here are a few powerful shortcuts you can use in your `WHERE` clause. [github](https://github.com/su-ntu-ctp/5m-data-1.4-sql-basic-dml)
+Sometimes basic `=` and `>` are not enough; here are a few powerful shortcuts you can use in your `WHERE` clause. 
 
 **`IN` – one of several values**
 
@@ -206,11 +202,11 @@ FROM
 
 > **Optional Exercise – advanced filters**  
 > - Return the unique flat types and flat models.  
-> - Find all towns starting with “P”. [github](https://github.com/su-ntu-ctp/5m-data-1.4-sql-basic-dml)
+> - Find all towns starting with “P”. 
 
 ##### Functions
 
-Functions are used to perform operations on data, returning new values. [github](https://github.com/su-ntu-ctp/5m-data-1.4-sql-basic-dml)
+Functions are used to perform operations on data, returning new values. 
 
 | Function | Description |
 | --- | --- |
@@ -220,7 +216,7 @@ Functions are used to perform operations on data, returning new values. [github]
 | `UPPER()` | String in uppercase |
 | `LENGTH()` | Length of a string |
 | `TRIM()` | Remove leading and trailing spaces |
-| `CONCAT()` | Concatenate strings | [github](https://github.com/su-ntu-ctp/5m-data-1.4-sql-basic-dml)
+| `CONCAT()` | Concatenate strings | 
 
 Example:
 
@@ -261,7 +257,7 @@ Learners will be able to summarize data using aggregate functions and use the HA
 
 ### 2.1 Aggregate Functions
 
-Aggregate functions perform calculations over many rows and return a single value. [github](https://github.com/su-ntu-ctp/5m-data-1.4-sql-basic-dml)
+Aggregate functions perform calculations over many rows and return a single value. 
 
 | Function | Description |
 | --- | --- |
@@ -271,7 +267,7 @@ Aggregate functions perform calculations over many rows and return a single valu
 | `MIN()` | Minimum value |
 | `MAX()` | Maximum value |
 | `FIRST()` | First value in a column |
-| `LAST()` | Last value in a column | [github](https://github.com/su-ntu-ctp/5m-data-1.4-sql-basic-dml)
+| `LAST()` | Last value in a column | 
 
 #### Workshop – Task 3: Basic Aggregates
 
@@ -316,7 +312,7 @@ GROUP BY
 
 > **Exercise – more aggregates**  
 > - Select the average resale price of flats in Bishan.  
-> - Select the total resale value (price) of flats in Tampines. [github](https://github.com/su-ntu-ctp/5m-data-1.4-sql-basic-dml)
+> - Select the total resale value (price) of flats in Tampines. 
 
 ***
 
@@ -342,7 +338,7 @@ ORDER BY
 
 “We know `WHERE` filters individual rows **before** they are grouped. Now, you only want to see towns where that average is over $600,000. You can't use `WHERE` because the average didn't exist until you grouped them. To see the towns where the average is over $600,000, you need to **GROUP** all flats by town first and then calculate their average prices. For such cases, we use `HAVING`. Think of `WHERE` as the *pre-filter* and `HAVING` as the *post-grouping filter*.”
 
-#### Deeper Dive: WHERE vs HAVING Side-by-Side (from 5m)
+#### Deeper Dive: WHERE vs HAVING Side-by-Side 
 
 ```sql
 -- Filter on individual rows before grouping
@@ -370,13 +366,13 @@ HAVING
   AVG(resale_price) > 500000;
 ```
 
-> Notice how the first query throws away rows cheaper than 500,000 before averaging, while the second keeps all rows but hides towns whose **average** is below 500,000. [github](https://github.com/su-ntu-ctp/5m-data-1.4-sql-basic-dml)
+> Notice how the first query throws away rows cheaper than 500,000 before averaging, while the second keeps all rows but hides towns whose **average** is below 500,000. 
 
 ***
 
 ### Group By
 
-The `GROUP BY` clause groups rows with the same values so you can calculate summaries per group. It comes after `WHERE` and before `ORDER BY`. [github](https://github.com/su-ntu-ctp/5m-data-1.4-sql-basic-dml)
+The `GROUP BY` clause groups rows with the same values so you can calculate summaries per group. It comes after `WHERE` and before `ORDER BY`. 
 
 #### Task 4: Group By & Having
 
@@ -396,7 +392,7 @@ ORDER BY
   avg_price DESC;
 ```
 
-##### Extra Patterns (from 5m)
+##### Extra Patterns 
 
 Group by multiple columns:
 
@@ -443,7 +439,7 @@ ORDER BY
 > **Exercise – grouped summaries**  
 > - Select the average resale price by flat type.  
 > - Select the average resale price by flat type and flat model.  
-> - Select the average resale price by town and lease commence date only for lease commence dates after year 2010 and sort by town (descending) and lease commence date (descending). [github](https://github.com/su-ntu-ctp/5m-data-1.4-sql-basic-dml)
+> - Select the average resale price by town and lease commence date only for lease commence dates after year 2010 and sort by town (descending) and lease commence date (descending). 
 
 ***
 
@@ -474,7 +470,7 @@ Learners will be able to categorize data using `CASE`, convert data types with `
 
 #### Task 5: Categorizing with CASE
 
-**Warm-Up CASE (from 5m)**
+**Warm-Up CASE**
 
 ```sql
 SELECT
@@ -535,13 +531,13 @@ FROM
 
 > **Exercise – custom categories**  
 > - Design your own “budget/mid/high-end” categories based on resale_price.  
-> - Design a “old vs new” label based on lease_commence_date. [github](https://github.com/su-ntu-ctp/5m-data-1.4-sql-basic-dml)
+> - Design a “old vs new” label based on lease_commence_date. 
 
 ***
 
 #### Task 6: Dates and Casting
 
-**Warm-Up: Casting Numbers (from 5m)**
+**Warm-Up: Casting Numbers**
 
 ```sql
 SELECT
@@ -576,9 +572,9 @@ FROM
 
 > **Question** “If the `month` column is text `'2017-01'`, can we add 1 month to it directly? Why do we need to `CAST` it to a `DATE` type first?”
 
-##### Optional: Advanced – Changing the Table Schema (from 5m)
+##### Optional: Advanced – Changing the Table Schema
 
-Sometimes you may want to permanently store the converted date and year in the table. [github](https://github.com/su-ntu-ctp/5m-data-1.4-sql-basic-dml)
+Sometimes you may want to permanently store the converted date and year in the table. 
 
 Convert the `month` text to a `date` and add as a new column:
 
@@ -619,7 +615,7 @@ FROM
 ### Q&A
 
 Common Hurdle: “What does the `::` mean?”  
-It is shorthand for `CAST(value AS datatype)`; for example, `resale_price::INTEGER` is the same as `CAST(resale_price AS INTEGER)`. [github](https://github.com/su-ntu-ctp/5m-data-1.4-sql-basic-dml)
+It is shorthand for `CAST(value AS datatype)`; for example, `resale_price::INTEGER` is the same as `CAST(resale_price AS INTEGER)`. 
 
 ### Reflection
 
